@@ -14,7 +14,7 @@ export function RoomPreview() {
   const [floor, setFloor] = useState(floors[0]);
 
   return (
-    <div>
+    <div className="min-w-0">
       <div className="flex flex-wrap gap-2">
         {rooms.map((item) => (
           <button
@@ -22,7 +22,9 @@ export function RoomPreview() {
             type="button"
             onClick={() => setRoom(item)}
             className={`min-h-12 px-4 text-[12px] tracking-[0.14em] uppercase border ${
-              room.id === item.id ? "border-ink bg-ink text-cream" : "border-stone bg-cream"
+              room.id === item.id
+                ? "border-ink bg-ink text-cream"
+                : "border-stone bg-cream text-ink"
             }`}
           >
             {item.label}
@@ -30,7 +32,7 @@ export function RoomPreview() {
         ))}
       </div>
       <div className="relative mt-5 overflow-hidden bg-stone">
-        <Picture src={room.image} alt={`${room.label} reference interior`} className="aspect-[16/10] w-full" />
+        <Picture src={room.image} alt={`${room.label} reference interior`} className="aspect-[4/3] w-full sm:aspect-[16/10]" />
         <div className="absolute inset-x-0 bottom-0 h-[38%] overflow-hidden">
           <img
             src={productImage(floor)}
@@ -38,17 +40,17 @@ export function RoomPreview() {
             className="h-full w-full object-cover opacity-90"
           />
         </div>
-        <p className="absolute top-4 left-4 bg-canvas/90 px-3 py-1.5 font-mono text-[10px] tracking-[0.16em] uppercase">
-          Illustrative only — product image laid into the lower plane, not a photoreal render
-        </p>
       </div>
+      <p className="mt-3 font-mono text-[10px] leading-relaxed tracking-[0.14em] uppercase text-stone">
+        Illustrative only — product image laid into the lower plane, not a photoreal render
+      </p>
       <div className="mt-4 flex gap-2 overflow-x-auto pb-2">
         {floors.map((item) => (
           <button
             key={item.slug}
             type="button"
             onClick={() => setFloor(item)}
-            className={`w-28 shrink-0 border p-2 text-left ${
+            className={`w-28 shrink-0 border bg-cream p-2 text-left text-ink ${
               floor.slug === item.slug ? "border-ink" : "border-stone"
             }`}
           >

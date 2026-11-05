@@ -124,8 +124,8 @@ export function HomePage() {
       </section>
 
       <section className="bg-charcoal py-16 text-cream md:py-24">
-        <div className="mx-auto grid max-w-[1440px] gap-10 px-4 md:grid-cols-12 md:px-6 lg:px-8">
-          <div className="md:col-span-5">
+        <div className="mx-auto grid max-w-[1440px] min-w-0 gap-10 px-4 md:px-6 lg:grid-cols-12 lg:px-8">
+          <div className="min-w-0 lg:col-span-5">
             <EditorialHeading tone="cream" eyebrow="See it in a room">
               Lay a sample
               <br />
@@ -137,7 +137,7 @@ export function HomePage() {
             </p>
             <InspirationUpload />
           </div>
-          <div className="md:col-span-7">
+          <div className="min-w-0 lg:col-span-7">
             <RoomPreview />
           </div>
         </div>
@@ -296,17 +296,17 @@ export function HomePage() {
 function InspirationUpload() {
   const [name, setName] = useState<string>();
   return (
-    <div className="mt-8 border border-white/15 p-5">
+    <div className="mt-8 min-w-0 border border-white/15 p-5">
       <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-taupe">Upload your inspiration</p>
       <p className="mt-2 text-sm text-stone">
         Attach a room or floor photo to your enquiry. No automated matching is claimed on this demo.
       </p>
-      <label className="mt-4 block">
+      <label className="mt-4 block min-w-0">
         <span className="sr-only">Upload inspiration image</span>
         <input
           type="file"
           accept="image/*"
-          className="block w-full text-sm text-stone"
+          className="block w-full min-w-0 text-sm text-stone"
           onChange={(e) => setName(e.target.files?.[0]?.name)}
         />
       </label>
