@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://heavenflooring.com.au/sitemap.xml

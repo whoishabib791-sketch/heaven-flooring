@@ -1,0 +1,51 @@
+export const educationRows = [
+  {
+    label: "What you see",
+    hybrid: "Printed or wear-layer timber look over a rigid core",
+    engineered: "Real hardwood surface — grain and variation are timber",
+    laminate: "Photographic timber look over an HDF core",
+    carpet: "Textile pile — colour and texture, not a timber plane",
+  },
+  {
+    label: "Water",
+    hybrid: "Waterproof rigid core; used in kitchens and wet-adjacent rooms",
+    engineered: "Not a wet-area floor; keep away from standing water",
+    laminate: "Water-resistant, not waterproof",
+    carpet: "Not suitable for wet areas",
+  },
+  {
+    label: "Underfoot",
+    hybrid: "Firm, stable, quieter with IXPE or underlay",
+    engineered: "The feel of real timber; warmth depends on species and finish",
+    laminate: "Firm click-floor feel; comfort depends on underlay",
+    carpet: "Softest option; also the quietest underfoot",
+  },
+  {
+    label: "Care",
+    hybrid: "Sweep and damp-mop; everyday family use",
+    engineered: "Follow the timber care guide; avoid excess water",
+    laminate: "Straightforward daily care; protect from standing spills",
+    carpet: "Vacuuming and periodic professional clean",
+  },
+  {
+    label: "Typical rooms",
+    hybrid: "Kitchen, living, apartment, whole home",
+    engineered: "Living, bedroom, whole home away from wet rooms",
+    laminate: "Living, bedroom, apartment",
+    carpet: "Bedroom, study, selected living rooms",
+  },
+  {
+    label: "Real timber?",
+    hybrid: "Timber-look",
+    engineered: "Yes — hardwood wear layer",
+    laminate: "Timber-look",
+    carpet: "No",
+  },
+  {
+    label: "How it goes down",
+    hybrid: "Usually floated click-lock",
+    engineered: "Click or tongue-and-groove, range dependent",
+    laminate: "Usually floated click-lock",
+    carpet: "Stretched or glued over underlay",
+  },
+] as const;
